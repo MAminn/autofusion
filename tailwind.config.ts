@@ -7,11 +7,34 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    container: {
+      center: true,
+      padding: "15px",
+    },
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1400px",
+    },
+    fontFamily: {
+      oswald: "var(--font-oswald)",
+      roboto: "var(--font-roboto)",
+    },
+    backgroundImage: {
+      hero: "url(/assets/img/hero/hero-car.jpg)",
+      membership: "url(/assets/img/membership/koenigzigg.jpg)",
+    },
+
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        primary: {
+          DEFAULT: "#F5F5F5",
+          100: "#FAFAFA ",
+          200: "#F5F5F5",
+          300: "#E5E5E5 ",
+        },
+        accent: "#007BFF",
       },
     },
   },
