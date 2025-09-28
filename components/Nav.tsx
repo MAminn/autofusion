@@ -5,10 +5,11 @@ import { Link as ScrollLink } from "react-scroll";
 
 const links = [
   { name: "home", route: "/", offset: -100 },
-  { name: "about", route: "about", offset: -80 },
-  { name: "prices", route: "prices", offset: -40 },
-  { name: "blog", route: "blog", offset: 0 },
-  { name: "contact", route: "contact", offset: 0 },
+  { name: "pages", route: "/about", offset: -80 },
+  { name: "elements", route: "/services", offset: -40 },
+  { name: "portfolios", route: "/portfolio", offset: 0 },
+  { name: "blogs", route: "/blog", offset: 0 },
+  { name: "shop", route: "/shop", offset: 0 },
 ];
 
 const Nav = ({ containerStyles }: { containerStyles: string }) => {
@@ -22,12 +23,12 @@ const Nav = ({ containerStyles }: { containerStyles: string }) => {
         return (
           <li
             key={link.route}
-            className={` list-none cursor-pointer hover:text-accent transition-all ${
-              isActive ? "text-accent" : " text-[#333333]"
-            }`}
-          >
-            <Link className="sidebar-link" href={link.route}>
+            className={`list-none cursor-pointer hover:text-white/70 transition-all duration-300 ${
+              isActive ? "text-white" : "text-white/90"
+            }`}>
+            <Link className='relative group' href={link.route}>
               {link.name}
+              <span className='absolute -bottom-1 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full'></span>
             </Link>
           </li>
         );

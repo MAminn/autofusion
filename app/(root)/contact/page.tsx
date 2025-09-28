@@ -39,51 +39,50 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="max-w-lg mx-auto p-4 mt-40 flex flex-col justify-center">
-      <h1 className="text-3xl font-bold mb-4 text-accent">Contact Us</h1>
+    <div className='max-w-lg mx-auto p-4 mt-40 flex flex-col justify-center'>
+      <h1 className='text-3xl font-bold mb-4 text-accent'>Contact Us</h1>
       {submitted ? (
-        <div className="text-green-500">
+        <div className='text-green-500'>
           Thank you for your message. We will get back to you shortly.
         </div>
       ) : (
-        <form className="space-y-4">
+        <form className='space-y-4'>
           <div>
-            <label className="block text-gray-700">Name</label>
+            <label className='block text-gray-700'>Name</label>
             <input
-              type="text"
+              type='text'
               value={name}
               required
-              className="w-full p-2 border border-gray-300 rounded mt-1"
+              className='w-full p-3 border border-gray-300 rounded-xl mt-1 focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300'
             />
           </div>
           <div>
-            <label className="block text-gray-700">Email</label>
+            <label className='block text-gray-700'>Email</label>
             <input
-              type="email"
+              type='email'
               value={email}
               required
-              className="w-full p-2 border border-gray-300 rounded mt-1"
+              className='w-full p-3 border border-gray-300 rounded-xl mt-1 focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300'
             />
           </div>
           <div>
-            <label className="block text-gray-700">Subject</label>
+            <label className='block text-gray-700'>Subject</label>
             <input
-              type="text"
+              type='text'
               value={subject}
               required
-              className="w-full p-2 border border-gray-300 rounded mt-1"
+              className='w-full p-3 border border-gray-300 rounded-xl mt-1 focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300'
             />
           </div>
           <div>
-            <label className="block text-gray-700">Message</label>
+            <label className='block text-gray-700'>Message</label>
             <textarea
               value={message}
               required
-              className="w-full p-2 border border-gray-300 rounded mt-1"
-            ></textarea>
+              className='w-full p-3 border border-gray-300 rounded-xl mt-1 h-32 resize-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300'></textarea>
           </div>
-          <div className="flex justify-center items-center">
-            <CustomeButton text="submit" containerStyles="w-[150px] h-[50px]" />
+          <div className='flex justify-center items-center'>
+            <CustomeButton text='submit' containerStyles='w-[150px] h-[50px]' />
           </div>
         </form>
       )}
